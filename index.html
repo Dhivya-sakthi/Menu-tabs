@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <div class="trending">
+        <h4>Trending</h4>
+        <div class="tab-header">
+            <div class="tab-link" onclick="showTab(0)"><i class="fa-solid fa-gamepad game"></i>Games</div>
+            <div class="tab-link" onclick="showTab(1)"><i class="fa-solid fa-film movie"></i>Movies</div>
+            <div class="tab-link" onclick="showTab(2)"><i class="fa-brands fa-readme  book"></i>Books</div>
+            
+        </div>
+        <div class="content active">
+            <div class="card">
+                <img src="./Images/luddo.jpeg" alt="luddo game">
+                <div class="info">
+                    <h3>Luddo Game</h3>
+                    <p>Game / Free / luddo</p>
+                </div>
+                <button class="explore">Explore</button>
+            </div>
+            <div class="card">
+                <img src="./Images/chees.jpeg" alt="chess">
+                <div class="info">
+                    <h3>Chess Game</h3>
+                    <p>Game / paid / Chess</p>
+                </div>
+                <button class="explore">Explore</button>
+            </div>
+            <div class="card">
+                <img src="./Images/car.jpeg" alt="car">
+                <div class="info">
+                    <h3>Car of Race</h3>
+                    <p>Game / Free / Action</p>
+                </div>
+                <div class="explore">Explore</div>
+            </div>
+        </div>
+    
+        <div class="content">
+            <div class="card">
+                <img src="./Images/OPP_DIGITAL1SHT_POSTER_2_20_UK-scaled.jpg" alt="movie1">
+                <div class="info">
+                    <h3>Oppenheimer</h3>
+                    <p>Drama/Thriller</p>
+                </div>
+                <div class="explore">Explore</div>
+            </div>
+            <div class="card">
+                <img src="./Images/barbie.jpg" alt="movie2">
+                <div class="info">
+                    <h3>Barbie</h3>
+                    <p>Comedy/Drma</p>
+                </div>
+                <div class="explore">Explore</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="card">
+                <img src="./Images/lord.jpeg" alt="book">
+                <div class="info">
+                    <h3>Lored of the Thinhs:Fellowships of the ring</h3>
+                    <p>Fantasty</p>
+                </div>
+                <div class="explore">Explore</div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function showTab(index)
+        {
+            let tabContents = document.getElementsByClassName("content");
+            for(let i =0;i<tabContents.length;i++){
+                tabContents[i].classList.remove("active");
+            }
+            tabContents[index].classList.add("active");
+        }
+    </script>
+    
+</body>
+</html>
